@@ -32,13 +32,14 @@ def upload_image():
 
 	if file and allowed_file(file.filename):
 		filename = secure_filename(file.filename)
-		full_filename=os.path.join(app.config['UPLOAD_FOLDER'], filename)
-		path_encryption="../assets/"
+		full_filename=os.path.join(app.config['UPLOAD_FOLDER'], filename) #Upload path staic/upload/filename.png
+		#path_encryption="../assets/"
 		file.save(full_filename)
 		#print('upload_image filename: ' + filename)
 		flash('Image successfully uploaded and displayed below')
 		Kc,Kr,Iterations=encrypt_image(full_filename,filename)
-		return render_template('show.html', path_encryption=path_encryption,full_filename=full_filename,Kc=Kc,Kr=Kr,Iterations=Iterations)
+		pathy= "../assests/"
+		return render_template('show.html',pathy=pathy,filename=filename, full_filename=full_filename,Kc=Kc,Kr=Kr,Iterations=Iterations)
 	else:
 		flash('Allowed image types are -> png, jpg, jpeg, gif')
 		return redirect(request.url)
