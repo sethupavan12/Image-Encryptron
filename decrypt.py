@@ -4,7 +4,7 @@ import numpy
 import sys
 from helper import *
 
-im = Image.open('encrypted_images/' + sys.argv[1])
+im = Image.open('/' + sys.argv[1])
 pix = im.load()
 
 
