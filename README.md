@@ -13,6 +13,12 @@ Flask based web application which encrypts an Image and provides required key va
 ![](https://github.com/sethupavan12/Turing-Image-Machine/blob/master/encrypted_images/pic3.png)
 
 ## NOTE: PROJECT STILL IN PROGRESS
+update: Encryption Works
+
+To do:
+Decryption page
+Front-End 
+thats it
 
 contributions are welcomed
 
