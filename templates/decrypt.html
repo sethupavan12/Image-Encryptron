@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+{% import "bootstrap/wtf.html" as wtf %}
 <h1>Image Decrypter</h1>
 
 <p> Upload the Kc, Kr ,  ITER_MAX text files</p>
-
+<!-- FORMS GO HERE -->
+{{ wtf.quick_form(form) }}
 
 
 <img src="{{full_filename}}" alt="provided_image">      <!-- HERE goes the shaky image-->
 
+
+
 <p>This is the image decrypted</p>
-<img src="{{pathy}}" alt="Encrypted_image">          <!-- Show the post processed image of decrypt.py-->
+<img src="{{pathy}}" alt="Revealed_image">          <!-- Show the post processed image of decrypt.py-->
 
 
 
